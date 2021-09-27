@@ -5,6 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.js"></script>
+    <script>
+      $(document).ready(function() {
+        $('.nav-tabs > li > a').click(function(event){
+        event.preventDefault();//stop browser to take action for clicked anchor
+              
+        //get displaying tab content jQuery selector
+        var active_tab_selector = $('.nav-tabs > li.active > a').attr('href');					
+              
+        //find actived navigation and remove 'active' css
+        var actived_nav = $('.nav-tabs > li.active');
+        actived_nav.removeClass('active');
+              
+        //add 'active' css into clicked navigation
+        $(this).parents('li').addClass('active');
+              
+        //hide displaying tab content
+        $(active_tab_selector).removeClass('active');
+        $(active_tab_selector).addClass('hide');
+              
+        //show target tab content
+        var target_tab_selector = $(this).attr('href');
+        $(target_tab_selector).removeClass('hide');
+        $(target_tab_selector).addClass('active');
+           });
+        });
+      </script>
     <title>MjaMarketing</title>
   </head>
   <body>
@@ -16,13 +43,15 @@
         little bit of love goes into everything we create, take a look at this
         selection of graphic design work from a range of our clients.
       </div>
-      <div class="tab-name">
-        <div class="tab-items">All</div>
-        <div class="tab-items">LOGO DESIGN</div>
-        <div class="tab-items">BUSINESS AND ADVERTISING</div>
-        <div class="tab-items">WEB DESIGN</div>
+      <div>
+        <ul class="nav nav-tabs">
+          <li><a href="#all">All</a></li>
+          <li><a href="#logoDesign"> LOGO DESIGN</a></li>
+          <li><a href="#business">BUSINESS AND ADVERTISING</a> </li>
+          <li><a href="#webDesign">WEB DESIGN</a></li>
+        </ul>
       </div>
-      <section class="tab-items-photo-container" id="all">
+      <section class="tab-items-photo-container tab-content" id="all">
         <div class="img-container"><img src="/img/img-01.jpeg" alt="" srcset=""></div>
         <div class="img-container"> <img src="/img/img-02.jpeg" alt="" srcset=""></div>
         <div class="img-container"> <img src="/img/img-03.jpeg" alt="" srcset=""></div>
@@ -39,21 +68,21 @@
         <div class="img-container"><img src="/img/img-14.jpeg" alt="" srcset=""></div>
         <div class="img-container"><img src="/img/img-15.jpeg" alt="" srcset=""></div>
         <div class="img-container"><img src="/img/img-16.jpeg" alt="" srcset=""></div>
-        <div class="img-container"><img src="/img/img-17.jpeg" alt="" srcset=""></div>
-        <div class="img-container"><img src="/img/img-18.jpeg" alt="" srcset=""></div>
+        <div class="img-container"><img src="/img/img-19.jpeg" alt="" srcset=""></div>
+        <div class="img-container"><img src="/img/img-20.jpeg" alt="" srcset=""></div>
         <!-- <img src="/img/img-18.jpeg" alt="" srcset="">
         <img src="/img/img-19.jpeg" alt="" srcset="">
         <img src="/img/img-20.jpeg" alt="" srcset=""> -->
         </section>
-      <section class="tab-items-photo-container" id="logoDesign">
-        <img src="/img/img-01.jpeg" alt="" srcset="">
-        <img src="/img/img-02.jpeg" alt="" srcset="">
-        <img src="/img/img-03.jpeg" alt="" srcset="">
-        <img src="/img/img-04.jpeg" alt="" srcset="">
-        <img src="/img/img-15.jpeg" alt="" srcset="">
-        <img src="/img/img-06.jpeg" alt="" srcset="">
-        <img src="/img/img-07.jpeg" alt="" srcset="">
-        <img src="/img/img-08.jpeg" alt="" srcset="">
+      <section class="tab-items-photo-container tab-content" id="logoDesign">
+        <div class="img-container"><img src="/img/img-01.jpeg" alt="" srcset=""></div>
+        <div class="img-container"> <img src="/img/img-02.jpeg" alt="" srcset=""></div>
+        <div class="img-container"> <img src="/img/img-03.jpeg" alt="" srcset=""></div>
+        <div class="img-container"> <img src="/img/img-04.jpeg" alt="" srcset=""></div>
+        <div class="img-container"> <img src="/img/img-15.jpeg" alt="" srcset=""></div>
+        <div class="img-container"> <img src="/img/img-06.jpeg" alt="" srcset=""></div>
+        <div class="img-container"> <img src="/img/img-07.jpeg" alt="" srcset=""></div>
+        <div class="img-container"> <img src="/img/img-08.jpeg" alt="" srcset=""></div>
         <!-- <img src="/img/img-09.jpeg" alt="" srcset="">
         <img src="/img/img-10.jpeg" alt="" srcset="">
         <img src="/img/img-11.jpeg" alt="" srcset="">
@@ -62,15 +91,15 @@
         <img src="/img/img-14.jpeg" alt="" srcset="">
         <img src="/img/img-15.jpeg" alt="" srcset=""> -->
         </section>
-      <section class="tab-items-photo-container" id="business">
-        <img src="/img/img-15.jpeg" alt="" srcset="">
-        <img src="/img/img-06.jpeg" alt="" srcset="">
-        <img src="/img/img-07.jpeg" alt="" srcset="">
-        <img src="/img/img-08.jpeg" alt="" srcset="">
-        <img src="/img/img-01.jpeg" alt="" srcset="">
-        <img src="/img/img-02.jpeg" alt="" srcset="">
-        <img src="/img/img-03.jpeg" alt="" srcset="">
-        <img src="/img/img-04.jpeg" alt="" srcset="">
+      <section class="tab-items-photo-container tab-content" id="business">
+        <div class="img-container"><img src="/img/img-01.jpeg" alt="" srcset=""></div>
+        <div class="img-container"> <img src="/img/img-02.jpeg" alt="" srcset=""></div>
+        <div class="img-container"> <img src="/img/img-03.jpeg" alt="" srcset=""></div>
+        <div class="img-container"> <img src="/img/img-04.jpeg" alt="" srcset=""></div>
+        <div class="img-container"> <img src="/img/img-15.jpeg" alt="" srcset=""></div>
+        <div class="img-container"> <img src="/img/img-06.jpeg" alt="" srcset=""></div>
+        <div class="img-container"> <img src="/img/img-07.jpeg" alt="" srcset=""></div>
+        <div class="img-container"> <img src="/img/img-08.jpeg" alt="" srcset=""></div>
         
         <!-- <img src="/img/img-09.jpeg" alt="" srcset="">
         <img src="/img/img-10.jpeg" alt="" srcset="">
@@ -80,15 +109,15 @@
         <img src="/img/img-14.jpeg" alt="" srcset="">
         <img src="/img/img-15.jpeg" alt="" srcset=""> -->
         </section>
-      <section class="tab-items-photo-container" id="webDesign">
-        <img src="/img/img-01.jpeg" alt="" srcset="">
-        <img src="/img/img-02.jpeg" alt="" srcset="">
-        <img src="/img/img-03.jpeg" alt="" srcset="">
-        <img src="/img/img-04.jpeg" alt="" srcset="">
-        <img src="/img/img-15.jpeg" alt="" srcset="">
-        <img src="/img/img-06.jpeg" alt="" srcset="">
-        <img src="/img/img-07.jpeg" alt="" srcset="">
-        <img src="/img/img-08.jpeg" alt="" srcset="">
+      <section class="tab-items-photo-container tab-content" id="webDesign">
+        <div class="img-container"><img src="/img/img-01.jpeg" alt="" srcset=""></div>
+        <div class="img-container"> <img src="/img/img-02.jpeg" alt="" srcset=""></div>
+        <div class="img-container"> <img src="/img/img-03.jpeg" alt="" srcset=""></div>
+        <div class="img-container"> <img src="/img/img-04.jpeg" alt="" srcset=""></div>
+        <div class="img-container"> <img src="/img/img-15.jpeg" alt="" srcset=""></div>
+        <div class="img-container"> <img src="/img/img-06.jpeg" alt="" srcset=""></div>
+        <div class="img-container"> <img src="/img/img-07.jpeg" alt="" srcset=""></div>
+        <div class="img-container"> <img src="/img/img-08.jpeg" alt="" srcset=""></div>
         <!-- <img src="/img/img-09.jpeg" alt="" srcset="">
         <img src="/img/img-10.jpeg" alt="" srcset="">
         <img src="/img/img-11.jpeg" alt="" srcset="">
