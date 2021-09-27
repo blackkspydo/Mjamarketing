@@ -56,7 +56,8 @@ img {
 }
 
 .nav > li > a {
-  display: block;
+  display: -ms-grid;
+  display: grid;
 }
 
 .nav-tabs {
