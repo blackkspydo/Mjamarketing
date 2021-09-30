@@ -27,7 +27,7 @@
     <div class="container">
         <h3>A snapshot of our logo design portfolio</h3>
         <p>We proudly create brands and websites that stand the test of time. A little bit of love goes into everything we create, take a look at this selection of graphic design work from a range of our clients.</p>
-        <button type="button" class="slick-prev">Previous</button>
+        
         <div class="slick-bs">
             <div class="slide"><img src="assets/images/portfolio/logos/logo-2b.png" alt="Logo Design 01" ></div>
             <div class="slide"><img src="assets/images/portfolio/logos/logo-active-lofts.png" alt="Logo Design 02" ></div>
@@ -38,6 +38,7 @@
             <div class="slide"><img src="assets/images/portfolio/logos/logo-MCK.png" alt="Logo Design 07" ></div>
             <div class="slide"><img src="assets/images/portfolio/logos/logo-MM.png" alt="Logo Design 08" ></div>
         </div>
+        <button type="button" class="slick-prev">Previous</button>
 
     </div>
     <script>
@@ -46,11 +47,12 @@
   dots: true,
   infinite: true,
   accessibility:true,
+  autoplay:true,
+  easing:'linear',
   speed: 300,
   arrows:true,
-  
   slidesToShow: 4,
-  slidesToScroll: 2,
+  slidesToScroll: 3,
   responsive: [
     {
       breakpoint: 1024,
