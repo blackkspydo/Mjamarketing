@@ -6,40 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.2.js"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-	<script type="text/javascript" src="/slick/slick.js></script>
    <link rel="stylesheet" href="slick/slick-theme.css">
    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-
-
-    <title>Portfolio</title>
-    <style>
-        .slide, img{
-            width: 300px!important;
-        }
-        .container{
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-    </style>
-				
-
+   <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <title>Portfolio</title>	
 </head>
 <body>
-    <div class="container">
-        <h3>A snapshot of our logo design portfolio</h3>
-        <p>We proudly create brands and websites that stand the test of time. A little bit of love goes into everything we create, take a look at this selection of graphic design work from a range of our clients.</p>
-        
-        <div class="slick-bs">
-            <div class="slide"><img src="assets/images/portfolio/logos/logo-2b.png" alt="Logo Design 01" ></div>
-            <div class="slide"><img src="assets/images/portfolio/logos/logo-active-lofts.png" alt="Logo Design 02" ></div>
-            <div class="slide"><img src="assets/images/portfolio/logos/logo-albermarle.png" alt="Logo Design 03" ></div>
-            <div class="slide"><img src="assets/images/portfolio/logos/logo-digital-workspace.png" alt="Logo Design 04" ></div>
-            <div class="slide"><img src="assets/images/portfolio/logos/logo-DMF.png" alt="Logo Design 05" ></div>
-            <div class="slide"><img src="assets/images/portfolio/logos/logo-FA.png" alt="Logo Design 06" ></div>
-            <div class="slide"><img src="assets/images/portfolio/logos/logo-MCK.png" alt="Logo Design 07" ></div>
-            <div class="slide"><img src="assets/images/portfolio/logos/logo-MM.png" alt="Logo Design 08" ></div>
+    <div class="container-slider-bs">
+        <div class="text-container-slider">
+        <h2 class="section-title">A snapshot of our logo design portfolio</h2>
+        <p class="mt-4"">We proudly create brands and websites that stand the test of time. A little bit of love goes into everything we create, take a look at this selection of graphic design work from a range of our clients.</p>
         </div>
-        <button type="button" class="slick-prev">Previous</button>
+        <div class="slick-bs">
+            <div class="slide-bs"><img src="assets/images/portfolio/logos/logo-2b.png" alt="Logo Design 01" ></div>
+            <div class="slide-bs"><img src="assets/images/portfolio/logos/logo-active-lofts.png" alt="Logo Design 02" ></div>
+            <div class="slide-bs"><img src="assets/images/portfolio/logos/logo-albermarle.png" alt="Logo Design 03" ></div>
+            <div class="slide-bs"><img src="assets/images/portfolio/logos/logo-digital-workspace.png" alt="Logo Design 04" ></div>
+            <div class="slide-bs"><img src="assets/images/portfolio/logos/logo-DMF.png" alt="Logo Design 05" ></div>
+            <div class="slide-bs"><img src="assets/images/portfolio/logos/logo-FA.png" alt="Logo Design 06" ></div>
+            <div class="slide-bs"><img src="assets/images/portfolio/logos/logo-MCK.png" alt="Logo Design 07" ></div>
+            <div class="slide-bs"><img src="assets/images/portfolio/logos/logo-MM.png" alt="Logo Design 08" ></div>
+        </div>
 
     </div>
     <script>
@@ -47,13 +34,10 @@
             $('.slick-bs').slick({
   dots: true,
   infinite: true,
-  accessibility:true,
-  autoplay:true,
-  easing:'linear',
   speed: 300,
   arrows:true,
   slidesToShow: 4,
-  slidesToScroll: 3,
+  slidesToScroll: 2,
   responsive: [
     {
       breakpoint: 1024,
