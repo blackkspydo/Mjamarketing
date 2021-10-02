@@ -131,10 +131,10 @@ body.compensate-for-scrollbar {
 }
 .fancybox__container {
   position: fixed;
-  top: 10em;
-  left: 10em;
-  bottom: 10em;
-  right: 10em;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
   direction: ltr;
   margin: 0;
   padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px)
