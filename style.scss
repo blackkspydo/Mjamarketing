@@ -128,7 +128,9 @@ img:hover{
   overflow: visible;
   transition:500ms ease-in-out;
 }
-
+.container2{
+  overflow: auto;
+}
 @media screen and (max-width: 600px) {
   .nav-tabs {
     grid-template-areas: "a b ""c d";

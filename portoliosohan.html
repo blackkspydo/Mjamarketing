@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"/>
+    <script type="text/javascript" src="slack/slack.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.2.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+
+    <script>
+      $(document).ready(function() {
+
+        $('.nav-tabs > li > a').click(function(event){
+        event.preventDefault();//stop browser to take action for clicked anchor
+              
+        //get displaying tab content jQuery selector
+        var active_tab_selector = $('.nav-tabs > li.active > a').attr('href');					
+              
+        //find actived navigation and remove 'active' css
+        var actived_nav = $('.nav-tabs > li.active');
+        actived_nav.removeClass('active');
+              
+        //add 'active' css into clicked navigation
+        $(this).parents('li').addClass('active');
+              
+        //hide displaying tab content
+        $(active_tab_selector).removeClass('active');
+        $(active_tab_selector).addClass('hide');
+              
+        //show target tab content
+        var target_tab_selector = $(this).attr('href');
+        $(target_tab_selector).removeClass('hide');
+        $(target_tab_selector).addClass('active');
+        });
+      
+  
+        });
+      </script>
+    <title>MjaMarketing</title>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+      <h1 class="heading">A snapshot of our portfolio</h1>
+      <div class="description">
+        We proudly create brands and websites that stand the test of time. A
+        little bit of love goes into everything we create, take a look at this
+        selection of graphic design work from a range of our clients.
+      </div>
+      <div>
+        <ul class="nav nav-tabs">
+          <li class="active"><a href="#all">ALL</a></li>
+          <li><a href="#business">BUSINESS AND ADVERTISING</a> </li>
+          <li><a href="#logoDesign"> LOGO DESIGN</a></li>
+          
+          <li><a href="#webDesign">WEB DESIGN</a></li>
+        </ul>
+      </div>
+      <div class="slick-scroll">
+      <div>
+      <section class="tab-content active" id="all">
+        <div class="img-container" ><img src="assets/images/portfolio/logos/logo-2b.png" data-fancybox="gallery-1" alt="Logo Design 01" ></div>
+        
+        <div class="img-container" ><img src="assets/images/portfolio/logos/logo-albermarle.png" data-fancybox="gallery-1" alt="Logo Design 03" ></div>
+        <div class="img-container" ><img src="assets/images/portfolio/logos/logo-digital-workspace.png" data-fancybox="gallery-1" alt="Logo Design 04" ></div>
+        <div class="img-container" ><img src="assets/images/portfolio/digital/website-mck.png" data-fancybox="gallery-1" alt="Web Design" ></div>
+        <div class="img-container" ><img src="assets/images/portfolio/digital/website-nbc.png" data-fancybox="gallery-1" alt="Web Design" ></div>
+        <div class="img-container" ><img src="assets/images/portfolio/logos/logo-DMF.png" data-fancybox="gallery-1" alt="Logo Design 05" ></div>
+        <div class="img-container" ><img src="assets/images/portfolio/logos/logo-FA.png" data-fancybox="gallery-1" alt="Logo Design 06" ></div>
+        <div class="img-container"><img src="assets/images/portfolio/logos/logo-MCK.png" data-fancybox="gallery-1" alt="Logo Design 07" ></div>
+        <div class="img-container"><img src="assets/images/portfolio/logos/logo-MM.png" data-fancybox="gallery-1" alt="Logo Design 08" ></div>
+        <div class="img-container"><img src="assets/images/portfolio/advertising/comfy-flyer.png" data-fancybox="gallery-1" alt="Business & Ads" ></div>
+        <div class="img-container"> <img src="assets/images/portfolio/advertising/gateville-flyer.png" data-fancybox="gallery-1" alt="Business & Ads" ></div>
+        <div class="img-container"> <img src="assets/images/portfolio/advertising/jc-ad.png" data-fancybox="gallery-1" alt="Business & Ads" ></div>
+        <div class="img-container"> <img src="assets/images/portfolio/advertising/spc-flyer.png" data-fancybox="gallery-1" alt="Business & Ads" ></div>
+        <div class="img-container"> <img src="assets/images/portfolio/digital/website-CGS.png" data-fancybox="gallery-1" alt="Web Design" ></div>
+        <div class="img-container"><img src="assets/images/portfolio/logos/logo-active-lofts.png" data-fancybox="gallery-1" alt="Logo Design 02" ></div>
+        <div class="img-container"><img src="assets/images/portfolio/digital/website-em.png" data-fancybox="gallery-1" alt="Web Design" ></div>
+        <div class="img-container"> <img src="assets/images/portfolio/digital/website-gateville.png" data-fancybox="gallery-1" alt="Web Design" ></div>
+        <div class="img-container"><img src="assets/images/portfolio/digital/website-instinctive.png" data-fancybox="gallery-1" alt="Web Design" ></div>
+ 
+        <div class="img-container"><img src="assets/images/portfolio/digital/website-solent.png" data-fancybox="gallery-1" alt="Web Design" ></div>
+        <div class="img-container"><img src="assets/images/portfolio/digital/website-sotdog.png" data-fancybox="gallery-1" alt="Web Design" ></div>
+        </section>
+      </div>
+      
+      <div>
+      <section class=" tab-content hide" id="logoDesign">
+        <div class="img-container"><img src="assets/images/portfolio/logos/logo-2b.png" data-fancybox="gallery-2"  alt="Logo Design 01" ></div>
+        <div class="img-container"><img src="assets/images/portfolio/logos/logo-active-lofts.png" data-fancybox="gallery-2" alt="Logo Design 02" ></div>
+        <div class="img-container"><img src="assets/images/portfolio/logos/logo-albermarle.png" data-fancybox="gallery-2" alt="Logo Design 03" ></div>
+        <div class="img-container"><img src="assets/images/portfolio/logos/logo-digital-workspace.png" data-fancybox="gallery-2" alt="Logo Design 04" ></div>
+        <div class="img-container"><img src="assets/images/portfolio/logos/logo-DMF.png" data-fancybox="gallery-2" alt="Logo Design 05" ></div>
+        <div class="img-container"><img src="assets/images/portfolio/logos/logo-FA.png" data-fancybox="gallery-2" alt="Logo Design 06" ></div>
+        <div class="img-container"><img src="assets/images/portfolio/logos/logo-MCK.png" data-fancybox="gallery-2" alt="Logo Design 07" ></div>
+        <div class="img-container"><img src="assets/images/portfolio/logos/logo-MM.png" data-fancybox="gallery-2" alt="Logo Design 08" ></div>
+        </section>
+      </div>
+      <div>
+      <section class="tab-content hide" id="business">
+        <div class="img-container"><img src="assets/images/portfolio/advertising/comfy-flyer.png" data-fancybox="gallery-3" alt="Business & Ads" ></div>
+        <div class="img-container"> <img src="assets/images/portfolio/advertising/gateville-flyer.png" data-fancybox="gallery-3" alt="Business & Ads" ></div>
+        <div class="img-container"> <img src="assets/images/portfolio/advertising/jc-ad.png" data-fancybox="gallery-3" alt="Business & Ads" ></div>
+        <div class="img-container"> <img src="assets/images/portfolio/advertising/spc-flyer.png" data-fancybox="gallery-3" alt="Business & Ads" ></div>
+        </section>
+      </div>
+      <div>
+      <section class="tab-content hide" id="webDesign">
+        <div class="img-container"> <img src="assets/images/portfolio/digital/website-CGS.png" data-fancybox="gallery-4" alt="Web Design" ></div>
+        <div class="img-container"><img src="assets/images/portfolio/digital/website-em.png" data-fancybox="gallery-4" alt="Web Design" ></div>
+        <div class="img-container"> <img src="assets/images/portfolio/digital/website-gateville.png" data-fancybox="gallery-4" alt="Web Design" ></div>
+        <div class="img-container"><img src="assets/images/portfolio/digital/website-instinctive.png" data-fancybox="gallery-4" alt="Web Design" ></div>
+        <div class="img-container"><img src="assets/images/portfolio/digital/website-mck.png" data-fancybox="gallery-4" alt="Web Design" ></div>
+        <div class="img-container"><img src="assets/images/portfolio/digital/website-nbc.png" data-fancybox="gallery-4" alt="Web Design" ></div>
+        <div class="img-container"><img src="assets/images/portfolio/digital/website-solent.png" data-fancybox="gallery-4" alt="Web Design" ></div>
+        <div class="img-container"><img src="assets/images/portfolio/digital/website-sotdog.png" data-fancybox="gallery-4" alt="Web Design" ></div>
+        </section>
+      </div>
+      </div>
+    </div>
+    </main>
+  </body>
+</html>
